@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="index.html" class="text-gray-800 text-xl font-bold">My Store</a>
+                </div>
+                <div>
+                    <input type="text" placeholder="Search" class="px-4 py-2 border rounded">
+                </div>
+                <div>
+                    <a href="cart.html" class="text-gray-800">Cart (0)</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 py-8">
+        <h1 class="text-3xl font-semibold text-gray-800">Checkout</h1>
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-lg font-semibold text-gray-800">Shipping Information</h2>
+            <div class="mt-4">
+                <input type="text" placeholder="Full Name" class="px-4 py-2 border rounded w-full">
+            </div>
+            <div class="mt-4">
+                <input type="text" placeholder="Address" class="px-4 py-2 border rounded w-full">
+            </div>
+            <div class="mt-4">
+                <input type="text" placeholder="City" class="px-4 py-2 border rounded w-full">
+            </div>
+            <div class="mt-4">
+                <input type="text" placeholder="State" class="px-4 py-2 border rounded w-full">
+            </div>
+            <div class="mt-4">
+                <input type="text" placeholder="Zip Code" class="px-4 py-2 border rounded w-full">
+            </div>
+        </div>
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-lg font-semibold text-gray-800">Payment Information</h2>
+            <div class="mt-4">
+                <input type="text" placeholder="Card Number" class="px-4 py-2 border rounded w-full">
+            </div>
+            <div class="mt-4">
+                <input type="text" placeholder="Expiration Date" class="px-4 py-2 border rounded w-full">
+            </div>
+            <div class="mt-4">
+                <input type="text" placeholder="CVV" class="px-4 py-2 border rounded w-full">
+            </div>
+        </div>
+        <div class="mt-6">
+            <button class="px-6 py-3 bg-blue-500 text-white text-sm font-semibold rounded-lg">Place Order</button>
+        </div>
+    </main>
+</body>
+</html>
