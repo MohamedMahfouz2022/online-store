@@ -1,20 +1,20 @@
 # online-store
-/project-root
-    /css
+#/project-root
+    #/css
         tailwind.min.css
         styles.css
-    /js
+    #/js
         auth.js
         cart.js
         checkout.js
         order-confirmation.js
         product.js
-        reviews.js  <!-- ملف جديد لإدارة المراجعات -->
+        reviews.js  
         search.js
-        advanced-search.js  <!-- ملف جديد للبحث المتقدم -->
-        stock.js  <!-- ملف جديد لإدارة المخزون -->
+        advanced-search.js  
+        stock.js  
         utils.js
-    /images
+    #/images
         product1.jpg
         product2.jpg
         product3.jpg
