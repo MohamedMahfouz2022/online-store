@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script defer type="module" src="js/manage-products.js"></script> <!-- ربط ملف جافا سكريبت -->
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="index.html" class="text-gray-800 text-xl font-bold">My Store</a>
+                </div>
+                <div>
+                    <a href="index.html" class="text-gray-800">Home</a>
+                </div>
+                <div>
+                    <a href="cart.html" class="text-gray-800">Cart (<span class="cart-count">0</span>)</a> <!-- عرض عدد العناصر في العربة -->
+                </div>
+                <div>
+                    <span id="userGreeting" class="text-gray-800"></span> <!-- عرض تحية المستخدم -->
+                    <button id="logoutButton" class="text-gray-800 hidden">Logout</button> <!-- زر تسجيل الخروج -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 py-8">
+        <h1 class="text-3xl font-semibold text-gray-800">Manage Products</h1>
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-lg">
+            <form id="productForm" class="space-y-4">
+                <input type="hidden" id="productId"> <!-- حقل مخفي لتخزين معرف المنتج -->
+                <div>
+                    <label for="productName" class="block text-sm font-medium text-gray-700">Product Name</label>
+                    <input type="text" id="productName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div>
+                    <label for="productPrice" class="block text-sm font-medium text-gray-700">Product Price</label>
+                    <input type="number" id="productPrice" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div>
+                    <label for="productDescription" class="block text-sm font-medium text-gray-700">Product Description</label>
+                    <textarea id="productDescription" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"></textarea>
+                </div>
+                <div>
+                    <label for="productQuantity" class="block text-sm font-medium text-gray-700">Available Quantity</label>
+                    <input type="number" id="productQuantity" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div>
+                    <label for="productImage" class="block text-sm font-medium text-gray-700">Product Image URL</label>
+                    <input type="text" id="productImage" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                </div>
+                <div>
+                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">Save Product</button> <!-- زر حفظ المنتج -->
+                </div>
+            </form>
+        </div>
+        <div id="productList" class="mt-6">
+            <!-- سيتم ملء المنتجات بواسطة JavaScript -->
+        </div>
+    </main>
+</body>
+</html>

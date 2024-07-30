@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Product Details</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script defer src="cart.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <script defer type="module" src="js/product.js"></script> <!-- ربط ملف جافا سكريبت الجديد -->
 </head>
-
 <body class="bg-gray-100">
     <header class="bg-white shadow">
         <div class="container mx-auto px-6 py-3">
@@ -16,30 +15,24 @@
                 <div>
                     <a href="index.html" class="text-gray-800 text-xl font-bold">My Store</a>
                 </div>
-                <div class=" w-1/4">
-                    <input id="searchInput" type="text" placeholder="Search" class="px-4 py-2 border rounded  w-full">
+                <div>
+                    <input id="searchInput" type="text" placeholder="Search" class="px-4 py-2 border rounded">
+                    <div id="searchResults" class="absolute bg-white border mt-1 rounded shadow-lg hidden"></div>
                 </div>
                 <div>
                     <a href="cart.html" class="text-gray-800">Cart (<span class="cart-count">0</span>)</a>
+                </div>
+                <div>
+                    <span id="userGreeting" class="text-gray-800"></span>
+                    <button id="logoutButton" class="text-gray-800 hidden">Logout</button>
                 </div>
             </div>
         </div>
     </header>
     <main class="container mx-auto px-6 py-8">
-        <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2">
-                <img src="product-image.jpg" alt="Product Image" class="w-full h-64 md:h-96 object-cover">
-            </div>
-            <div class="md:w-1/2 md:ml-8">
-                <h1 class="text-3xl font-semibold text-gray-800">Product Name</h1>
-                <p class="mt-2 text-gray-600">$20.00</p>
-                <p class="mt-4 text-gray-600">This is a detailed description of the product. It highlights the key
-                    features and benefits of the product.</p>
-                <button class="mt-4 px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-lg add-to-cart"
-                    data-product-id="1">Add to Cart</button>
-            </div>
+        <div id="productDetails" class="bg-white p-6 rounded-lg shadow-lg">
+            <!-- سيتم ملء تفاصيل المنتج بواسطة JavaScript -->
         </div>
     </main>
 </body>
-
 </html>

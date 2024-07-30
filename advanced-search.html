@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script defer type="module" src="js/advanced-search.js"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="index.html" class="text-gray-800 text-xl font-bold">My Store</a>
+                </div>
+                <div>
+                    <a href="cart.html" class="text-gray-800">Cart (<span class="cart-count">0</span>)</a>
+                </div>
+                <div>
+                    <span id="userGreeting" class="text-gray-800"></span>
+                    <button id="logoutButton" class="text-gray-800 hidden">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 py-8">
+        <h1 class="text-3xl font-semibold text-gray-800">Advanced Search</h1>
+        <form id="searchForm" class="mt-6 bg-white p-6 rounded-lg shadow-lg space-y-4">
+            <div>
+                <label for="searchQuery" class="block text-sm font-medium text-gray-700">Search Query</label>
+                <input type="text" id="searchQuery" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+            </div>
+            <div>
+                <label for="minPrice" class="block text-sm font-medium text-gray-700">Min Price</label>
+                <input type="number" id="minPrice" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+            </div>
+            <div>
+                <label for="maxPrice" class="block text-sm font-medium text-gray-700">Max Price</label>
+                <input type="number" id="maxPrice" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+            </div>
+            <div>
+                <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
+                <input type="text" id="category" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+            </div>
+            <div>
+                <label for="minRating" class="block text-sm font-medium text-gray-700">Min Rating</label>
+                <input type="number" id="minRating" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+            </div>
+            <div>
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">Search</button>
+            </div>
+        </form>
+        <div id="searchResults" class="mt-6">
+            <!-- سيتم ملء نتائج البحث بواسطة JavaScript -->
+        </div>
+    </main>
+</body>
+</html>
